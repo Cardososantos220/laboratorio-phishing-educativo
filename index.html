@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Banco Demo - Treinamento</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: #f2f4f7;
+        }
+
+        header {
+            background: #123b5d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .aviso {
+            background: #fff3cd;
+            color: #664d03;
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .caixa {
+            width: 90%;
+            max-width: 400px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+        }
+
+        h2 {
+            text-align: center;
+            color: #123b5d;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 13px;
+            background: #123b5d;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    BANCO DEMO
+</header>
+
+<div class="aviso">
+    ⚠️ AMBIENTE DE TREINAMENTO — NÃO É UM BANCO REAL
+</div>
+
+<div class="caixa">
+
+    <h2>Acesso à conta</h2>
+
+    <form onsubmit="treinamento(event)">
+
+        <label>Utilizador</label>
+        <input
+            type="text"
+            placeholder="Utilizador fictício"
+            autocomplete="off"
+        >
+
+        <label>Senha</label>
+        <input
+            type="password"
+            placeholder="Senha fictícia"
+            autocomplete="off"
+        >
+
+        <button type="submit">
+            Entrar
+        </button>
+
+    </form>
+
+    <p id="resultado"></p>
+
+</div>
+
+<script>
+function treinamento(event) {
+
+    event.preventDefault();
+
+    document.getElementById("resultado").innerHTML =
+        "✅ Simulação concluída.<br><br>" +
+        "Nenhuma credencial foi enviada ou armazenada.";
+}
+</script>
+
+</body>
+</html>
